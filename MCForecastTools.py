@@ -87,7 +87,8 @@ class MCSimulation:
         std_returns = daily_returns.std().tolist()
         
         # Initialize empty Dataframe to hold simulated prices
-        portfolio_cumulative_returns = pd.DataFrame()
+        #portfolio_cumulative_returns = pd.DataFrame()
+        simulated_returns_list = []
         
         # Run the simulation of projecting stock prices 'nSim' number of times
         for n in range(self.nSim):
@@ -106,7 +107,7 @@ class MCSimulation:
         
                     # Calculate the simulated price using the last price within the list
                     simvals[s].append(simvals[s][-1] * (1 + np.random.normal(mean_returns[s], std_returns[s])))
-    
+                   
             # Calculate the daily returns of simulated prices
             sim_df = pd.DataFrame(simvals).T.pct_change()
     
@@ -114,7 +115,10 @@ class MCSimulation:
             sim_df = sim_df.dot(self.weights)
     
             # Calculate the normalized, cumulative return series
-            portfolio_cumulative_returns[n] = (1 + sim_df.fillna(0)).cumprod()
+            #portfolio_cumulative_returns[n] = (1 + sim_df.fillna(0)).cumprod()
+            
+            simulated_returns_list.append((1 + sim_df.fillna(0)).cumprod())
+            portfolio_cumulative_returns = pd.concat(simulated_returns_list, axis=1)
         
         # Set attribute to use in plotting
         self.simulated_return = portfolio_cumulative_returns
@@ -123,6 +127,7 @@ class MCSimulation:
         self.confidence_interval = portfolio_cumulative_returns.iloc[-1, :].quantile(q=[0.025, 0.975])
         
         return portfolio_cumulative_returns
+    
     
     def plot_simulation(self):
         """
@@ -169,4 +174,5 @@ class MCSimulation:
         metrics = self.simulated_return.iloc[-1].describe()
         ci_series = self.confidence_interval
         ci_series.index = ["95% CI Lower","95% CI Upper"]
-        return metrics.append(ci_series)
+        result_series = pd.concat([metrics, ci_series])
+        return result_series

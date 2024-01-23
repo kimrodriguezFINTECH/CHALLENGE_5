@@ -46,11 +46,20 @@ In this section, you will assess the financial health of the credit union's memb
 1. Create a variable called monthly_income and set its value to 12000.
 2. To analyze savings health, create a DataFrame called df_savings with two rows. Store the total value in dollars of the crypto assets in the first row and the total value of the shares in the second row.
 Hint: The df_savings DataFrame should have one column named amount and two rows where crypto and shares are the index values:
+
+<img width="533" alt="Screenshot 2024-01-23 at 1 07 26 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/c0925ef4-38ad-4f3c-bd8e-aa3043129228">
+
+
 3. Use the df_savings DataFrame to plot a pie chart to visualize the composition of personal savings.
+   
+<img width="821" alt="Screenshot 2024-01-23 at 1 07 37 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/0cdb9a49-3e3d-4f85-9a2d-b0710442761c">
+
 4. Use if conditional statements to validate if the current savings are enough for an emergency fund. An ideal emergency fund should be equal to three times your monthly income.
 * If total savings are greater than the emergency fund, display a message congratulating the person for having enough money in this fund.
 * If total savings are equal to the emergency fund, display a message congratulating the person on reaching this financial goal.
 * If total savings are less than the emergency fund, display a message showing how many dollars away the person is from reaching the goal.
+  
+<img width="967" alt="Screenshot 2024-01-23 at 1 07 43 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/858cc2d8-041a-40d2-bb8c-d7152d657c98">
 
 # Part 2 - Retirement Planning
 In this section, you will use the Alpaca API to fetch historical closing prices for a retirement portfolio and then Use the MCForecastTools toolkit to create Monte Carlo simulations to project the portfolio performance at 30 years. You will then use the Monte Carlo data to answer questions about the portfolio.
@@ -58,20 +67,39 @@ Follow the steps outlined in the starter notebook to complete the following:
 
 ## Monte Carlo Simulation
 1. Use the Alpaca API to fetch five years historical closing prices for a traditional 40/60 portfolio using the SPY and AGG tickers to represent the 60% stocks (SPY) and 40% bonds (AGG) composition of the portfolio. Make sure to convert the API output to a DataFrame and preview the output.
-
 Note: In Monte-Carlo Simulation, getting data as far back as possible matters, because if we simulate using only small amounts of data during a recent time when markets are booming, or instead falling precipitously, a Monte-Carlo Analysis will inadvertently extrapolate this temporary market movement too far into the future. Getting data over a longer time period mitigates this effect.
 
+<img width="591" alt="Screenshot 2024-01-23 at 1 10 33 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/7f453b30-b492-44d8-bde4-312707b1a767">
+
+<img width="627" alt="Screenshot 2024-01-23 at 1 12 06 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/7710cbde-f5da-4c4c-9c96-fe80a75e74aa">
+
+<img width="516" alt="Screenshot 2024-01-23 at 1 12 12 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/80473fdb-652b-4365-a8e7-ad0359c3b09c">
+
 2. Configure and execute a Monte Carlo Simulation of 500 runs and 30 years for the 40/60 portfolio.
+   
+<img width="621" alt="Screenshot 2024-01-23 at 1 18 48 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/1b8b8075-ad6e-4b8f-9a59-2303fc7be420">
 
 3. Plot the simulation results and the probability distribution/confidence intervals.
+   
+<img width="948" alt="Screenshot 2024-01-23 at 1 18 18 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/09b7a506-196a-4cea-b59c-eb482f2ea13d">
+
+<img width="917" alt="Screenshot 2024-01-23 at 1 20 44 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/7104e562-b22e-4965-bea6-46329ac6cf06">
+
 
 # Retirement Analysis
 1. Fetch the summary statistics from the Monte Carlo simulation results.
 
+<img width="527" alt="Screenshot 2024-01-23 at 1 22 13 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/b88dfca0-014b-42f9-bf6c-5d12c8a5f57c">
 
 2. Given an initial investment of $20,000, calculate the expected portfolio return in dollars at the 95% lower and upper confidence intervals.
 
+<img width="990" alt="Screenshot 2024-01-23 at 1 22 43 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/5b39e090-10c7-4521-a421-999f7f123a22">
+
+
 3. Calculate the expected portfolio return at the 95% lower and upper confidence intervals based on a 50% increase in the initial investment.
+
+<img width="991" alt="Screenshot 2024-01-23 at 1 22 52 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/53730c02-7df4-4734-911d-d206b203a54b">
+
 
 # Resources 
 ## In Class Activites 

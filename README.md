@@ -10,27 +10,27 @@ The second tool will be a retirement planning tool that will use the Alpaca API 
 
 # Part 1 - Personal Finance Planner
 In this section of the challenge, you will create a personal finance planner application. To develop the personal finance planner prototype, you should take into account the following assumptions:
-*The average household income for each member of the credit union is $12,000.
-*Every union member has a savings portfolio composed of cryptocurrencies, stocks and bonds:
-*Assume the following amount of crypto assets: 1.2 BTC and 5.3 ETH.
-*Assume the following amount of shares in stocks and bonds: 50 SPY (stocks) and 200 AGG (bonds).
+* The average household income for each member of the credit union is $12,000.
+* Every union member has a savings portfolio composed of cryptocurrencies, stocks and bonds:
+* Assume the following amount of crypto assets: 1.2 BTC and 5.3 ETH.
+* Assume the following amount of shares in stocks and bonds: 50 SPY (stocks) and 200 AGG (bonds).
 
 ## Collect Crypto Prices Using the requests Library
-*Create two variables called my_btc and my_eth. Set them equal to 1.2 and 5.3, respectively.
-*Use the requests library to fetch the current price in US dollars (USD) of bitcoin (BTC) and ethereum (ETH) using the Alternative Free Crypto API endpoints provided in the starter notebook.
-*Parse the API JSON response to select only the crypto prices and store each price in a variable.
+* Create two variables called my_btc and my_eth. Set them equal to 1.2 and 5.3, respectively.
+* Use the requests library to fetch the current price in US dollars (USD) of bitcoin (BTC) and ethereum (ETH) using the Alternative Free Crypto API endpoints provided in the starter notebook.
+* Parse the API JSON response to select only the crypto prices and store each price in a variable.
 Hint: Be aware of the particular identifier for each cryptocurrency in the API JSON response - the bitcoin identifier is 1 whereas ethereum is 1027.
-*Compute the portfolio value of cryptocurrencies and print the results.
+* Compute the portfolio value of cryptocurrencies and print the results.
 
-##Collect Investments Data Using Alpaca: SPY (stocks) and AGG (bonds)
+## Collect Investments Data Using Alpaca: SPY (stocks) and AGG (bonds)
 Important: Remember to create a .env file in your working directory to store the values of your Alpaca API key and Alpaca secret key.
 
-*Create two variables named my_agg and my_spy and set them equal to 200 and 50, respectively.
-*Set the Alpaca API key and secret key variables, then create the Alpaca API object using the tradeapi.REST function from the Alpaca SDK.
-*Format the current date as ISO format. You may change the date set in the starter code to the current date.
-*Get the current closing prices for SPY and AGG using Alpaca's get_bars() function. Transform the function's response to a Pandas DataFrame and preview the data.
-*Pick the SPY and AGG close prices from the Alpaca's get_bars() DataFrame response and store them as Python variables. Print the closing values for validation.
-*Compute the value in dollars of the current amount of shares and print the results.
+* Create two variables named my_agg and my_spy and set them equal to 200 and 50, respectively.
+* Set the Alpaca API key and secret key variables, then create the Alpaca API object using the tradeapi.REST function from the Alpaca SDK.
+* Format the current date as ISO format. You may change the date set in the starter code to the current date.
+* Get the current closing prices for SPY and AGG using Alpaca's get_bars() function. Transform the function's response to a Pandas DataFrame and preview the data.
+* Pick the SPY and AGG close prices from the Alpaca's get_bars() DataFrame response and store them as Python variables. Print the closing values for validation.
+* Compute the value in dollars of the current amount of shares and print the results.
 
 ## Savings Health Analysis
 In this section, you will assess the financial health of the credit union's members.
@@ -39,9 +39,9 @@ In this section, you will assess the financial health of the credit union's memb
 Hint: The df_savings DataFrame should have one column named amount and two rows where crypto and shares are the index values:
 3. Use the df_savings DataFrame to plot a pie chart to visualize the composition of personal savings.
 4. Use if conditional statements to validate if the current savings are enough for an emergency fund. An ideal emergency fund should be equal to three times your monthly income.
-*If total savings are greater than the emergency fund, display a message congratulating the person for having enough money in this fund.
-*If total savings are equal to the emergency fund, display a message congratulating the person on reaching this financial goal.
-*If total savings are less than the emergency fund, display a message showing how many dollars away the person is from reaching the goal.
+* If total savings are greater than the emergency fund, display a message congratulating the person for having enough money in this fund.
+* If total savings are equal to the emergency fund, display a message congratulating the person on reaching this financial goal.
+* If total savings are less than the emergency fund, display a message showing how many dollars away the person is from reaching the goal.
 
 # Part 2 - Retirement Planning
 In this section, you will use the Alpaca API to fetch historical closing prices for a retirement portfolio and then Use the MCForecastTools toolkit to create Monte Carlo simulations to project the portfolio performance at 30 years. You will then use the Monte Carlo data to answer questions about the portfolio.
@@ -66,14 +66,24 @@ Note: In Monte-Carlo Simulation, getting data as far back as possible matters, b
 
 # Resources 
 
-* The Alpaca Markets API will be used to pull historical stocks and bonds information.
-* The Alternative Free Crypto API will be used to retrieve Bitcoin and Ethereum prices.
+## The documentation for these APIs can be found via the following links:
+* Free Crypto API Documentation: https://alternative.me/crypto/api/
+* AlpacaDOCS: https://docs.alpaca.markets/docs/getting-started
 
-* The documentation for these APIs can be found via the following links:
+## Tutors & Peers 
+* Tutor Meetings through FINTECH Bootcamp:
+Vijaya
+Tuesday 1/23/2024
 
-Free Crypto API Documentation
-AlpacaDOCS
-
+* Tutor Meetings External Resources:
+Website: https://www.edwardrees.info
+Edward R.
+-Sunday 1/21/2024
+ 
+* Study Partner taking FINTECH Bootcamp (Same Class):
+German Romero
+-Helped eachother fix code errors
+-Cross Referenced work to help eachother understand why we are using a specific code and understand what the question is asking us for
 
 
 

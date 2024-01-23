@@ -65,6 +65,9 @@ Note: In Monte-Carlo Simulation, getting data as far back as possible matters, b
 3. Calculate the expected portfolio return at the 95% lower and upper confidence intervals based on a 50% increase in the initial investment.
 
 # Resources 
+## In Class Activites 
+* https://git.bootcampcontent.com/University-of-California---Berkeley/UCB-VIRT-FIN-PT-12-2023-U-LOLC/-/blob/main/05-APIs/Class_2_Activities/04-Ins_Alpaca_Demo/Solved/alpaca-demo.ipynb?ref_type=heads
+* https://git.bootcampcontent.com/University-of-California---Berkeley/UCB-VIRT-FIN-PT-12-2023-U-LOLC/-/blob/main/05-APIs/Class_2_Activities/05-Stu_Investment_Value/Solved/investment-value.ipynb?ref_type=heads
 
 ## The documentation for these APIs can be found via the following links:
 * Free Crypto API Documentation: https://alternative.me/crypto/api/

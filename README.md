@@ -14,13 +14,16 @@ In this section of the challenge, you will create a personal finance planner app
 * Every union member has a savings portfolio composed of cryptocurrencies, stocks and bonds:
 * Assume the following amount of crypto assets: 1.2 BTC and 5.3 ETH.
 * Assume the following amount of shares in stocks and bonds: 50 SPY (stocks) and 200 AGG (bonds).
-
+  
 ## Collect Crypto Prices Using the requests Library
 * Create two variables called my_btc and my_eth. Set them equal to 1.2 and 5.3, respectively.
 * Use the requests library to fetch the current price in US dollars (USD) of bitcoin (BTC) and ethereum (ETH) using the Alternative Free Crypto API endpoints provided in the starter notebook.
 * Parse the API JSON response to select only the crypto prices and store each price in a variable.
 Hint: Be aware of the particular identifier for each cryptocurrency in the API JSON response - the bitcoin identifier is 1 whereas ethereum is 1027.
 * Compute the portfolio value of cryptocurrencies and print the results.
+
+<img width="626" alt="Screenshot 2024-01-23 at 12 54 12 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/4197b54a-aa59-4098-9f72-8bbaafa73218">
+
 
 ## Collect Investments Data Using Alpaca: SPY (stocks) and AGG (bonds)
 Important: Remember to create a .env file in your working directory to store the values of your Alpaca API key and Alpaca secret key.
@@ -31,6 +34,12 @@ Important: Remember to create a .env file in your working directory to store the
 * Get the current closing prices for SPY and AGG using Alpaca's get_bars() function. Transform the function's response to a Pandas DataFrame and preview the data.
 * Pick the SPY and AGG close prices from the Alpaca's get_bars() DataFrame response and store them as Python variables. Print the closing values for validation.
 * Compute the value in dollars of the current amount of shares and print the results.
+
+<img width="656" alt="Screenshot 2024-01-23 at 1 00 19 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/4ce6dec8-8c25-4dd7-9b40-962e6598b980">
+
+<img width="987" alt="Screenshot 2024-01-23 at 1 00 51 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/49a6e868-77a5-4c6d-b051-55ea1b64e91b">
+
+<img width="664" alt="Screenshot 2024-01-23 at 1 03 01 PM" src="https://github.com/kimrodriguezFINTECH/CHALLENGE_5/assets/152752672/7788ae5e-3e9a-4c4b-b1a7-636f8ddee471">
 
 ## Savings Health Analysis
 In this section, you will assess the financial health of the credit union's members.

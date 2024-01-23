@@ -71,17 +71,17 @@ Note: In Monte-Carlo Simulation, getting data as far back as possible matters, b
 * AlpacaDOCS: https://docs.alpaca.markets/docs/getting-started
 
 ## Tutors & Peers 
-* Tutor Meetings through FINTECH Bootcamp:
-Vijaya
-Tuesday 1/23/2024
+### Tutor Meetings through FINTECH Bootcamp:
+* Vijaya
+- Tuesday 1/23/2024
 
-* Tutor Meetings External Resources:
+### Tutor Meetings External Resources:
+* Edward R.
 Website: https://www.edwardrees.info
-Edward R.
--Sunday 1/21/2024
+- Sunday 1/21/2024
  
-* Study Partner taking FINTECH Bootcamp (Same Class):
-German Romero
+### Study Partner taking FINTECH Bootcamp (Same Class):
+* German Romero
 -Helped eachother fix code errors
 -Cross Referenced work to help eachother understand why we are using a specific code and understand what the question is asking us for
 
